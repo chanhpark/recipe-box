@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+<link href="/foundation.min.css" rel="stylesheet">
 <head>
   <title>Recipes Home Page</title>
 </head>
 <body>
   <div>
     <header>
-      <a href="/">HOME</a></li>
-      <h1> These are the Recipes!</h1>
-    </header>
+      <div class="row">
+        <div class="nav-bar">
+          <ul class="button-group">
+            <h1> Elite Recipes</h1>
+            <a href="/" class="button">Home</a>
+            <a href="/recipes" class="button">All Recipes</a>
 
-    <selection>
-      <ul>
+            </ul>
+          </ul>
+        </div>
         <% @all_recipe.each do |recipe| %>
         <li><a href='/recipes/<%=recipe['id'] %>'><%= recipe["name"] %></a></li>
         <% end %>
-      </ul>
-    </selection>
+      </div>
 
-  </div>
+
+
 </body>
 </html>
